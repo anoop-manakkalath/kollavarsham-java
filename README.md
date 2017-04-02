@@ -6,25 +6,14 @@ The JAVA API port for Kollavarsham (http://kollavarsham.org)
 
 ## Getting Started
 Download the sources and build using ant in the project root directory.
-```
-ant clean compile jar
-```
-Note: To compile the jUnit tests, download junit.4.xx.jar to {project-root}/lib
 
-To run the diagnostics, use the main() program in Kollavarsham using
+To build the project:
 ```
-ant run
+mvn clean install
 ```
-To run the junit tests, download hamcrest-core-X.X.jar to {project-root}/lib and run the following target
-```
-ant junit
-```
-To view the report, run the following target:
-``` 
-ant junitreport
-```
-And point your browser to {project-root}/build/junitreport/index.html
-To use Kollavarsham API in a different project, add Kollavarsham.jar from {project-root}/build/jar to the classpath
+To view the report, go to the 'site/jacoco' folder of the 'target' folder and open 'index.html'
+
+To use Kollavarsham API in a different project, add 'kollavarsham-java-1.0.0-SNAPSHOT.jar' from {project-root}/target to the classpath
 
 ## Usage
 
@@ -35,7 +24,7 @@ import org.kollavarsham.Kollavarsham;
 ...
 	Kollavarsham malayalamYear = new Kollavarsham();
 	Calendar modernDate = Calendar.getInstance();
-	modernDate.set(2011, Calendar.APRIL, 4);
+	modernDate.set(2017, Calendar.APRIL, 2);
 	malayalamYear.setModernDate(modernDate);
 	malayalamYear.setOptions(true, "Ujjain");
 	malayalamYear.FromGregorian();
