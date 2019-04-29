@@ -5,7 +5,7 @@ kollavarsham-java
 The JAVA API port for Kollavarsham (http://kollavarsham.org)
 
 ## Getting Started
-Download the sources and build using ant in the project root directory.
+Download the sources and build using maven in the project root directory.
 
 To build the project:
 ```
